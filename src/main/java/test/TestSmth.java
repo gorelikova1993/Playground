@@ -1,40 +1,29 @@
 package test;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class TestSmth {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 3, 3};
-        System.out.println(method(arr, 0,4));
-    }
-//    public static int method(int[] array, int left, int right, int value) {
-//        int middle;
-//        if (left >= right) {
-//            return 0;
-//        }
-//        else if (left == right - 1) {
-//            if (array[left] == value) {
-//                return 1;
-//            }
-//            else return 0;
-//        }
-//        else {
-//            middle = (left + right) / 2;
-//            return method(array, left, middle, value)
-//                    + method(array, middle, right, value);
-//        }
-//    }
 
-    public static int method(int[] array, int left , int right) {
-        int middle;
-        if (left == right) {
-            if (array[left] % 2 == 0) {
-                return 1;
-            } else {
-                return 0;
-            }
+        System.out.println(TestSmth.joinNumbersFromRange(2, 2));
+        System.out.println(TestSmth.joinNumbersFromRange(1, 5));
+        System.out.println(TestSmth.joinNumbersFromRange(10, 12));
+    }
+
+    public static String joinNumbersFromRange(int start, int finish) {
+        // BEGIN (write your solution here)
+        String str = "";
+        if(start == finish) {
+            str = "" + start;
         } else {
-            middle = (left + right) / 2;
-            return method(array, left, middle)
-                    + method(array, middle + 1, right);
-        }
+        int i = start;
+        while(i <= finish) {
+
+            str = str + "" + i;
+            i++;
+        } }
+        return str;
+        // END
     }
 }
