@@ -2,7 +2,7 @@ package fileSystem;
 
 import java.io.File;
 
-public class LookForDir {
+public class  LookForDir {
     //looking for dir that has the max files
     public static void main(String[] args) {
         String pathToFile = "D:\\basedir";
