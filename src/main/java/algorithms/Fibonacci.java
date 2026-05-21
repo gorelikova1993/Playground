@@ -42,5 +42,24 @@ public class Fibonacci {
             System.out.println(arr[i]);
         }
     }
+    
+    void printFibonacci(long n){
+        if (n == 0) {
+            System.out.println(0);
+        } else if (n == 1) {
+            System.out.println(1);
+        } else {
+            
+            long prev = 0;
+            long curr = 1;
+            
+            for (long i = 2; i <= n; i++) {
+                long next = prev + curr;
+                prev = curr;
+                curr = next;
+            }
+            System.out.println(curr);
+        }
+    }
 
 }
